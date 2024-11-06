@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: -20cm;
+    background-color: #f0f0f0;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, p {
+    margin-bottom: -500px;
+}
+img {
+    max-width: 10%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.small-logo {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .bg-primary {
+    padding: 0;
+    margin: 0;
+  }
+  #contenedor {
+    margin: 20px auto; 
+       max-width: 800px; 
+       padding: 0 20px; 
+}
+
+
+p {
+ margin-bottom: 20px; 
+}
+#mi-parrafo  {
+   color: rgba(4, 76, 74, 0.8); 
+   font-size: 60px; 
+   padding: 10px; 
+}
