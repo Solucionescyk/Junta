@@ -354,3 +354,8 @@ body, ul, li, p, a, label, input, div {
   padding-top: 1rem; /* Ajustar el espacio superior en esta fila */
   padding-bottom: 1rem; /* Ajustar el espacio inferior en esta fila */
 }
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Posiciona los botones al 50% de la altura */
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+}

@@ -44,3 +44,16 @@ p {
    font-size: 60px; 
    padding: 10px; 
 }
+#contenedor_tarjetas {
+    display: flex;
+    justify-content: center;
+}
+#contenedor_tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto ajusta el contenedor a toda la altura de la pantalla */
+}
+.card-text {
+    text-align: center;
+}
