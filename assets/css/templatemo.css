@@ -67,8 +67,8 @@ body, ul, li, p, a, label, input, div {
 /* Nav */
 #templatemo_nav_top { min-height: 10px;}
 #templatemo_nav_top * { font-size: .9em !important;}
-#templatemo_main_nav a { color: #032412 !important;}
-#templatemo_main_nav a:hover { color: #032412;}
+#templatemo_main_nav a { color: black !important;}
+#templatemo_main_nav a:hover { color: black;}
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
 
@@ -235,60 +235,47 @@ body, ul, li, p, a, label, input, div {
 .toggle-label:hover {
   color: inherit; /* Cambiar el color al pasar el mouse */
 }
+
 .carousel-control-prev,
 .carousel-control-next {
-  width: 50px; /* Ajusta el tamaño del botón */
-  height: 50px; /* Ajusta el tamaño del botón */
-  background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-  border-radius: 50%; /* Hace que el fondo sea circular */
+  width: 100px; /* Permite que el ancho se ajuste al contenido */
+  height: 500px; /* Permite que la altura se ajuste al contenido */
+  background-color: transparent; /* Elimina el fondo circular */
+  border: none;
+  outline: none;
+  box-shadow: none; /* Elimina la sombra */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none; /* Elimina el borde del botón */
-  outline: none; /* Elimina el contorno del botón */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+  cursor: pointer;
+
 }
 
-/* Estilos para los iconos dentro de los botones */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro con opacidad */
-  border-radius: 50%; /* Forma circular para el fondo */
-  width: 50px; /* Ajusta el tamaño del fondo */
-  height: 50px; /* Ajusta el tamaño del fondo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+ font-size: 90px;
 }
+
+/* Iconos de flecha dentro de los botones de control */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
-  background-image: none; /* Remove default arrow icon */
+  background-image: none; /* Quita la imagen de fondo predeterminada */
+  font-size: 70px; /* Aumenta el tamaño de la flecha */
+  color: #1e197c; /* Color de las flechas */
 }
 
 .carousel-control-prev-icon::after {
-  content: '<'; /* Character for previous arrow */
-  font-size: 30px;
-  color: rgb(255, 255, 255); /* Color of the arrow */
+  content: '‹'; /* Carácter de flecha estilizado */
+  font-size: 100px; /* Tamaño de la flecha */
+  color:  #1e197c;
 }
 
 .carousel-control-next-icon::after {
-  content: '>'; /* Character for next arrow */
-  font-size: 30px;
-  color: white; /* Color of the arrow */
-}
-#carouselnoti .card .btn-primary {
-  background-color: #74cac6; 
-  border-color: #74cac6; 
-  color: white; 
+  content: '›'; /* Carácter de flecha estilizado */
+  font-size: 100px; /* Tamaño de la flecha */
+  color:  #1e197c;
 }
 
-/* Cambia el color del botón "Leer más" cuando el ratón está sobre él */
-#carouselnoti .card .btn-primary:hover {
-  background-color: #1e197c; /* Color de fondo del botón al pasar el ratón */
-  border-color: #1e197c; /* Color del borde del botón al pasar el ratón */
-  color: white; /* Color del texto del botón al pasar el ratón */
-}
 .participa img {
   display: flex;
   align-items: center;
@@ -356,6 +343,7 @@ body, ul, li, p, a, label, input, div {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50%; /* Posiciona los botones al 50% de la altura */
-  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+  top: 40%; /* Posiciona los botones al 50% de la altura */
+  transform: translateY(-40%); /* Ajusta para centrar verticalmente */
+  
 }
