@@ -189,12 +189,16 @@ body, ul, li, p, a, label, input, div {
 
 @media (min-width: 576px) {
   .tempaltemo-carousel .h1 { font-size: 1em !important;}
-}
+
+ }
+
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   #templatemo_main_nav .navbar-nav {max-width: 450px;}
- }
+
+  }
+ 
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
@@ -205,15 +209,111 @@ body, ul, li, p, a, label, input, div {
     width: 12px;
     height: 12px;
   }
+
 }
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+ 
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -11rem;
+   
+    
+   
+    
+    
+  }
+  .carousel-control-prev-icon::after {
+    content: '‹'; /* Carácter de flecha estilizado */
+    color:  #1e197c;
+    position: relative;
+    left: -2rem;
+    
+  }
+  .carousel-control-next-icon::after {
+    content: '›'; /* Carácter de flecha estilizado */
+    font-size: 100px;
+    color:  #1e197c;
+    position: relative;
+    left: 2rem;
+  }
+  
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+    
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -8rem;
+    
+    
+  }
+}
+
+/* Pantallas grandes (laptops) */
+@media (min-width: 769px) and (max-width: 991px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -4rem;
+    
+  }
+  }
+
+
+/* Pantallas extragrandes (desktops) */
+@media (min-width: 992px) {
+  /* Centrado de las flechas en el carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -2rem;
+    
+  }
+}
+
 .container py-5 {
   background-color: #1e197c; 
   padding: 80px;
   margin-bottom: 50px;
 }
 
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
+
+
+
 
 
 
@@ -251,29 +351,35 @@ body, ul, li, p, a, label, input, div {
 
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
- font-size: 90px;
-}
+
 
 /* Iconos de flecha dentro de los botones de control */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-image: none; /* Quita la imagen de fondo predeterminada */
   font-size: 70px; /* Aumenta el tamaño de la flecha */
-  color: #1e197c; /* Color de las flechas */
+  color: black; /* Color de las flechas */
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .carousel-control-prev-icon::after {
   content: '‹'; /* Carácter de flecha estilizado */
   font-size: 100px; /* Tamaño de la flecha */
-  color:  #1e197c;
+  color: black;
+  
 }
 
 .carousel-control-next-icon::after {
   content: '›'; /* Carácter de flecha estilizado */
-  font-size: 100px; /* Tamaño de la flecha */
-  color:  #1e197c;
+  font-size: 100px;
+  color: black;
+  
+
+ 
 }
 
 .participa img {
@@ -340,10 +446,4 @@ body, ul, li, p, a, label, input, div {
 .py-3 {
   padding-top: 1rem; /* Ajustar el espacio superior en esta fila */
   padding-bottom: 1rem; /* Ajustar el espacio inferior en esta fila */
-}
-.carousel-control-prev,
-.carousel-control-next {
-  top: 40%; /* Posiciona los botones al 50% de la altura */
-  transform: translateY(-40%); /* Ajusta para centrar verticalmente */
-  
 }
