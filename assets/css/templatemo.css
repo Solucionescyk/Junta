@@ -67,8 +67,8 @@ body, ul, li, p, a, label, input, div {
 /* Nav */
 #templatemo_nav_top { min-height: 10px;}
 #templatemo_nav_top * { font-size: .9em !important;}
-#templatemo_main_nav a { color: #032412 !important;}
-#templatemo_main_nav a:hover { color: #032412;}
+#templatemo_main_nav a { color: black !important;}
+#templatemo_main_nav a:hover { color: black;}
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
 
@@ -189,12 +189,16 @@ body, ul, li, p, a, label, input, div {
 
 @media (min-width: 576px) {
   .tempaltemo-carousel .h1 { font-size: 1em !important;}
-}
+
+ }
+
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   #templatemo_main_nav .navbar-nav {max-width: 450px;}
- }
+
+  }
+ 
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
@@ -205,15 +209,111 @@ body, ul, li, p, a, label, input, div {
     width: 12px;
     height: 12px;
   }
+
 }
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+ 
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -11rem;
+   
+    
+   
+    
+    
+  }
+  .carousel-control-prev-icon::after {
+    content: '‹'; /* Carácter de flecha estilizado */
+    color:  #1e197c;
+    position: relative;
+    left: -2rem;
+    
+  }
+  .carousel-control-next-icon::after {
+    content: '›'; /* Carácter de flecha estilizado */
+    font-size: 100px;
+    color:  #1e197c;
+    position: relative;
+    left: 2rem;
+  }
+  
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+    
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -8rem;
+    
+    
+  }
+}
+
+/* Pantallas grandes (laptops) */
+@media (min-width: 769px) and (max-width: 991px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -4rem;
+    
+  }
+  }
+
+
+/* Pantallas extragrandes (desktops) */
+@media (min-width: 992px) {
+  /* Centrado de las flechas en el carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajusta el ancho para una mejor posición */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    position: relative;
+    align-items: center;
+    top: -2rem;
+    
+  }
+}
+
 .container py-5 {
   background-color: #1e197c; 
   padding: 80px;
   margin-bottom: 50px;
 }
 
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
+
+
+
 
 
 
@@ -235,60 +335,53 @@ body, ul, li, p, a, label, input, div {
 .toggle-label:hover {
   color: inherit; /* Cambiar el color al pasar el mouse */
 }
+
 .carousel-control-prev,
 .carousel-control-next {
-  width: 50px; /* Ajusta el tamaño del botón */
-  height: 50px; /* Ajusta el tamaño del botón */
-  background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-  border-radius: 50%; /* Hace que el fondo sea circular */
+  width: 100px; /* Permite que el ancho se ajuste al contenido */
+  height: 500px; /* Permite que la altura se ajuste al contenido */
+  background-color: transparent; /* Elimina el fondo circular */
+  border: none;
+  outline: none;
+  box-shadow: none; /* Elimina la sombra */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none; /* Elimina el borde del botón */
-  outline: none; /* Elimina el contorno del botón */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+  cursor: pointer;
+
 }
 
-/* Estilos para los iconos dentro de los botones */
+
+
+/* Iconos de flecha dentro de los botones de control */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro con opacidad */
-  border-radius: 50%; /* Forma circular para el fondo */
-  width: 50px; /* Ajusta el tamaño del fondo */
-  height: 50px; /* Ajusta el tamaño del fondo */
+  background-image: none; /* Quita la imagen de fondo predeterminada */
+  font-size: 70px; /* Aumenta el tamaño de la flecha */
+  color: black; /* Color de las flechas */
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
-  background-image: none; /* Remove default arrow icon */
+ 
 }
 
 .carousel-control-prev-icon::after {
-  content: '<'; /* Character for previous arrow */
-  font-size: 30px;
-  color: rgb(255, 255, 255); /* Color of the arrow */
+  content: '‹'; /* Carácter de flecha estilizado */
+  font-size: 100px; /* Tamaño de la flecha */
+  color: black;
+  
 }
 
 .carousel-control-next-icon::after {
-  content: '>'; /* Character for next arrow */
-  font-size: 30px;
-  color: white; /* Color of the arrow */
-}
-#carouselnoti .card .btn-primary {
-  background-color: #74cac6; 
-  border-color: #74cac6; 
-  color: white; 
+  content: '›'; /* Carácter de flecha estilizado */
+  font-size: 100px;
+  color: black;
+  
+
+ 
 }
 
-/* Cambia el color del botón "Leer más" cuando el ratón está sobre él */
-#carouselnoti .card .btn-primary:hover {
-  background-color: #1e197c; /* Color de fondo del botón al pasar el ratón */
-  border-color: #1e197c; /* Color del borde del botón al pasar el ratón */
-  color: white; /* Color del texto del botón al pasar el ratón */
-}
 .participa img {
   display: flex;
   align-items: center;
@@ -353,9 +446,4 @@ body, ul, li, p, a, label, input, div {
 .py-3 {
   padding-top: 1rem; /* Ajustar el espacio superior en esta fila */
   padding-bottom: 1rem; /* Ajustar el espacio inferior en esta fila */
-}
-.carousel-control-prev,
-.carousel-control-next {
-  top: 50%; /* Posiciona los botones al 50% de la altura */
-  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
 }
